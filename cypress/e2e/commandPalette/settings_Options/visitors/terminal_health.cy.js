@@ -1,0 +1,36 @@
+import LoginPage from "../../../../pageObject/login.js";
+import CommandPalette from "../../../../pageObject/commandPalette.js";
+const loginPage = new LoginPage();
+const commandPalette = new CommandPalette();
+
+describe(' CommandPalette Functionality',()=>{
+    before( () =>{ 
+        cy.fixture('loginPage.json').then((userdata)=>{
+            cy.visit(Cypress.env('url'))
+            loginPage.getEmailInputField(userdata.adminEmail);
+            loginPage.getPasswordInputField(userdata.adminPassword);
+            loginPage.getsubmitBtn();
+            loginPage.getTextVerifyLogin();
+        })
+    })
+
+
+   it('should redirect to terminal health  page',()=>{
+       
+        commandPalette.getCommandPalette().click()
+        commandPalette.getSettingsOption().each(($e1, index, $list) => {        
+          if($e1.text()==="Visitors")
+           {
+             cy.wrap($e1).click();
+            }
+        })
+        commandPalette.getVisitorsOptions().each(($e1, index, $list) => {        
+         if($e1.text()==="Terminal Health")
+          {
+             cy.wrap($e1).should('be.visible').click();
+           }
+        })
+        cy.url().should('eq','https://ndl.veris.in/settings/terminalHealth')
+    })
+    
+})
