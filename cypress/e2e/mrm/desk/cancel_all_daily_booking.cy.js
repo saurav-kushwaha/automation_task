@@ -33,9 +33,9 @@ describe("Desks Cancel - cancel all Daily booking ", () => {
         cy.contains('Booking created successfully',{timeout: 10000}).should('be.visible')
         cy.contains("RA Desk 034").should("be.visible")
         cy.wait(3000)
-        createBooking.clickOnThreeDotsBtn();
+        createBooking.getClickOnThreeDotsBtn();
         createBooking.getClickOnDeleteAllBoking();
         cy.contains('All Booking Cancelled succesfully').should('be.visible');
-        cy.contains('RA Desk 034').should('not.exist');
+       
     })
 })

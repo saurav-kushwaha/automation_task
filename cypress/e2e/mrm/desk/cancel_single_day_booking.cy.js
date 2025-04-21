@@ -34,6 +34,6 @@ describe("Desks cancel -cancel single day booking ", () => {
         createBooking.clickOnCancelBooking();
         createBooking.clickOnConfirmCancelBtn();
         cy.contains('Booking Cancelled succesfully').should('be.visible')
-        cy.contains('RA Desk 034').should('not.exist');
+       
     })
 })

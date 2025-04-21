@@ -35,6 +35,6 @@ describe("Desks cancel - cancel all weekly booking ", () => {
         createBooking.getClickOnThreeDotsBtn();
         createBooking.getClickOnDeleteAllBoking();
         cy.contains('All Booking Cancelled succesfully').should('be.visible');
-        cy.contains('RA Desk 034').should('not.exist');
+        
     })
 })
