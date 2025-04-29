@@ -22,6 +22,7 @@ describe('Portal Downloads : quick reports  ', () => {
         quickReport.getClickOnDatePicker().eq(14).click();
         quickReport.getClickOnToday();
         cy.wait(3000)
+        quickReport.getClickOnToday();
         quickReport.getClickOnDownloadForBtn().eq(14).click();
         quickReport.verifySuccessMessage();
         
