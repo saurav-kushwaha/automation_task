@@ -18,10 +18,10 @@ describe('Portal Downloads : quick reports  ', () => {
         cy.wait(5000)
         quickReport.getClickOnDownloadCenter();
         quickReport.getClickOnQuickReport();
-        quickReport.verifyTitleText().eq(9).should("contain.text", "DR Visitor Report (Genpact Internal Visitor, External Visitor, Vendor)")
-        quickReport.getClickOnDatePicker().eq(5).click();
+        quickReport.verifyTitleText().eq(10).should("contain.text", "DR Visitor Report (Genpact Internal Visitor, External Visitor, Vendor)")
+        quickReport.getClickOnDatePicker().eq(6).click();
         quickReport.getClickOnLastMonth();
-        quickReport.getClickOnDownloadForBtn().eq(5).click();
+        quickReport.getClickOnDownloadForBtn().eq(6).click();
         quickReport.verifySuccessMessage();
         
     })
