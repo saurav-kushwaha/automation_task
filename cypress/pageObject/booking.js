@@ -34,7 +34,7 @@ class Booking{
     automationTowerVms="#0-floor > .ant-col-24 > .ant-row-space-between";
     recurringAutomationTower=':nth-child(8)>.ant-flex>.sc-gDpztx';
     defaultStarIcon=' div.ant-col.ant-col-1.css-augzy' ;
-    repeatInputField='.ant-col > .sc-jtQUzJ > .sc-cEzcPc > .ant-select > .ant-select-selector > .ant-select-selection-item';
+    repeatInputField="div[class='ant-select ant-select-outlined sc-lixPIL hEpvU text-coolGray-700 relative css-7qmxcr ant-select-single ant-select-show-arrow'] div[class='ant-select-selector']";
     repeatDropDownDaily="div[title='Daily']>div[class='ant-select-item-option-content']";
     repeatDropDownWeekly="div[title='Weekly']>div[class='ant-select-item-option-content']";
     defaultListView='tr.ant-table-row.ant-table-row-level-0';
