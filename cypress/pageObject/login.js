@@ -7,7 +7,7 @@ class LoginPage{
   
   getEmailInputField(userEmail)
   {
-    return cy.get(this.txtEmailId,{ timeout: 120000 }).clear().type(userEmail,{ log: false })
+    return cy.get(this.txtEmailId).clear().type(userEmail,{ log: false })
   }
 
   getPasswordInputField(userPassword)
