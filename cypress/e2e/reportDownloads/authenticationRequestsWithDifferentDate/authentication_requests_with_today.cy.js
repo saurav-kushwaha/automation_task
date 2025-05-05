@@ -15,13 +15,13 @@ describe('Portal Downloads : quick reports  ', () => {
     })
 
     it('should show confirmation message of quick report  after clicking on download for button of Authentication Requests with today',()=>{
-        cy.wait(5000)
+        //cy.wait(5000)
         quickReport.getClickOnDownloadCenter();
         quickReport.getClickOnQuickReport();
         quickReport.verifyTitleText().eq(6).should("contain.text", "Authentication Requests")
         quickReport.getClickOnDatePicker().eq(2).click();
         quickReport.getClickOnToday();
-        cy.wait(3000)
+        //cy.wait(3000)
         quickReport.getClickOnToday();
         quickReport.getClickOnDownloadForBtn().eq(2).click();
         quickReport.verifySuccessMessage();

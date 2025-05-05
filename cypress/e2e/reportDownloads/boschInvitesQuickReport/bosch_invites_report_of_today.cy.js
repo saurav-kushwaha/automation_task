@@ -15,13 +15,13 @@ describe('Portal Downloads : quick reports  ', () => {
     })
 
     it('should show confirmation message of quick report  after clicking on download for button of Bosch Invites Report with today',()=>{
-        cy.wait(5000)
+        //cy.wait(5000)
         quickReport.getClickOnDownloadCenter();
         quickReport.getClickOnQuickReport();
         quickReport.verifyTitleText().eq(17).should("contain.text", "Bosch Invites Report")
         quickReport.getClickOnDatePicker().eq(13).click();
         quickReport.getClickOnToday();
-        cy.wait(3000)
+        //cy.wait(3000)
         quickReport.getClickOnToday();
         quickReport.getClickOnDownloadForBtn().eq(13).click();
         quickReport.verifySuccessMessage();

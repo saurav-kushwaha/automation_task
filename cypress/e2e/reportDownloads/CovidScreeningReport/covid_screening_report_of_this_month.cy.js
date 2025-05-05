@@ -15,7 +15,7 @@ describe('Portal Downloads : quick reports  ', () => {
     })
 
     it('should show confirmation message of quick report  after clicking on download for button of Covid Screening Report with this month',()=>{
-        cy.wait(5000)
+        //cy.wait(5000)
         quickReport.getClickOnDownloadCenter();
         quickReport.getClickOnQuickReport();
         quickReport.verifyTitleText().eq(13).should("contain.text", "Covid Screening Report")

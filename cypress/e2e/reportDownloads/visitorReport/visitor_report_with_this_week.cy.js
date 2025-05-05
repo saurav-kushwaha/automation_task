@@ -15,7 +15,7 @@ describe('Portal Downloads : quick reports  ', () => {
     })
 
     it('should show confirmation message of quick report  after clicking on download for button of Visitor Report with this week',()=>{
-        cy.wait(5000)
+        //cy.wait(5000)
         quickReport.getClickOnDownloadCenter();
         quickReport.getClickOnQuickReport();
         quickReport.verifyTitleText().eq(12).should("contain.text", "Visitor Report")
