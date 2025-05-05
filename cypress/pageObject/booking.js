@@ -152,7 +152,7 @@ class Booking{
     }
     getClickOnRepeatWeeklyOption()
     {
-        return cy.get(this.repeatDropDownWeekly,{timeout: 10000}).click()
+        return cy.get(this.repeatDropDownWeekly).click()
     }
     
     
@@ -163,14 +163,14 @@ class Booking{
     
     getClickOnRepeatDailyOption()
     {
-        return cy.get(this.repeatDropDownDaily,{timeout: 10000}).should('be.visible').click()
+        return cy.get(this.repeatDropDownDaily).should('be.visible').click()
     }
 
 
    
    getClickOnBookingOptionOfMoreApps()
    {
-     return cy.contains('Booking',{timeout: 10000}).should('be.visible').click();
+     return cy.contains('Booking').should('be.visible').click();
    }
 
   getClickOnStatusDropDown()
@@ -195,7 +195,7 @@ class Booking{
 
   getClickOnBookNowBtn()
    {
-      return cy.get(this.bookNowBtn,{timeout:10000}).click();
+      return cy.get(this.bookNowBtn).click();
    }
 
   getClickOnConfirmBookingBtn()
@@ -204,7 +204,7 @@ class Booking{
    }
    getClickOnBookNowBtnForRooms()
    {
-      return cy.get(this.bookNowbtnForRooms,{timeout:10000}).click();
+      return cy.get(this.bookNowbtnForRooms).click();
    }
    getClickOnConfirmBookingBtnOfRooms()
     {
@@ -213,7 +213,7 @@ class Booking{
 
    getClickOnCheckInBtn()
    {
-      return cy.get(this.checkInBtn,{timeout:6000}).click();
+      return cy.get(this.checkInBtn).click();
    }
 
    getClickOnExtendBtn()
