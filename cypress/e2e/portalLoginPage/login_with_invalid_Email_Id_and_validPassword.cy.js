@@ -17,7 +17,7 @@ describe('Login functionality', () => {
         loginPage.getEmailInputField(userdata.invalidAdminEmail);
         loginPage.getPasswordInputField(userdata.adminPassword);
         loginPage.getsubmitBtn();
-        cy.contains("The username or password is incorrect",{ timeout: 7000 }).should("be.visible");
+        cy.contains("The username or password is incorrect").should("be.visible");
       })
         
     })

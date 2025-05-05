@@ -9,12 +9,12 @@ describe('Login functionality', () => {
                loginPage.getEmailInputField(userdata.adminEmail);
                loginPage.getPasswordInputField(userdata.invalidAdminPassword);
                loginPage.getsubmitBtn();
-               cy.contains("Invalid credentials.",{ timeout: 70000 }).should("be.visible");
+               cy.contains("Invalid credentials.").should("be.visible");
             }
             loginPage.getEmailInputField(userdata.adminEmail);
             loginPage.getPasswordInputField(userdata.invalidAdminPassword);
             loginPage.getsubmitBtn();
-            cy.contains("User blocked! try after2minutes",{ timeout: 70000 }).should("be.visible");
+            cy.contains("User blocked! try after2minutes").should("be.visible");
 
       })
                 
