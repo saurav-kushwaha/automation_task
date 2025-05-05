@@ -19,7 +19,6 @@ describe("Desks Booking -Daily booking ", () => {
         createBooking.getClickOnBookingOptionOfMoreApps()
         cy.get('body').click()
        // cy.url().should('eq','https://ndl.veris.in/meeting-room/find-resource');
-        cy.wait(14000)
         createBooking.getRecurringAutomationTower();
         createBooking.getClickOnRecurringAutomationFloor();
         //createBooking.clickOnDefaultStarIcon();

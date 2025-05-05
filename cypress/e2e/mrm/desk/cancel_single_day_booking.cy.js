@@ -19,8 +19,8 @@ describe("Desks cancel -cancel single day booking ", () => {
         createBooking.getClickOnBookingOptionOfMoreApps()
         cy.get('body').click()
        // cy.url().should('eq','https://ndl.veris.in/meeting-room/find-resource');
-        cy.wait(14000)
         createBooking.getRecurringAutomationTower();
+        createBooking.getClickOnRecurringAutomationFloor();
         //createBooking.clickOnDefaultStarIcon();
         createBooking.getClickOnStatusDropDown()
         createBooking.selectStatus();
@@ -29,8 +29,7 @@ describe("Desks cancel -cancel single day booking ", () => {
         cy.get('body').click();
         createBooking.getClickOnBookNowBtn();
         createBooking.getClickOnConfirmBookingBtn();
-        cy.contains('Booking created successfully',{timeout: 10000}).should('be.visible')
-        cy.wait(3000)
+        cy.contains('Booking created successfully').should('be.visible')
         createBooking.clickOnCancelBooking();
         createBooking.clickOnConfirmCancelBtn();
         cy.contains('Booking Cancelled succesfully').should('be.visible')
