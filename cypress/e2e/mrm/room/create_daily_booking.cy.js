@@ -19,8 +19,8 @@ describe("Room Booking -single day for daily booking ", () => {
         createBooking.getClickOnBookingOptionOfMoreApps()
         cy.get('body').click()
        // cy.url().should('eq','https://ndl.veris.in/meeting-room/find-resource');
-        cy.wait(14000)
         createBooking.getRecurringAutomationTower();
+        createBooking.getClickOnRecurringAutomationFloor();
         //createBooking.clickOnDefaultStarIcon();
         createBooking.getClickOnStatusDropDown()
         createBooking.selectStatus();
@@ -31,7 +31,7 @@ describe("Room Booking -single day for daily booking ", () => {
         createBooking.getRepeatInputFieldDropDown();
         createBooking.getClickOnRepeatDailyOption();
         createBooking.getClickOnConfirmBookingBtnOfRooms();
-        cy.contains('Booking created successfully',{timeout: 10000}).should('be.visible')
-        cy.contains("RA Room 018",{timeout:12000}).should("be.visible")
+        cy.contains('Booking created successfully').should('be.visible');
+        cy.contains("RA Room 018").should("be.visible");
     })
 })

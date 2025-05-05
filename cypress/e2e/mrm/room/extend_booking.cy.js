@@ -19,8 +19,8 @@ describe("Room Booking extend  ", () => {
         createBooking.getClickOnBookingOptionOfMoreApps()
         cy.get('body').click()
        // cy.url().should('eq','https://ndl.veris.in/meeting-room/find-resource');
-        cy.wait(14000)
         createBooking.getRecurringAutomationTower();
+        createBooking.getClickOnRecurringAutomationFloor();
         //createBooking.clickOnDefaultStarIcon();
         createBooking.getClickOnStatusDropDown()
         createBooking.selectStatus();
@@ -29,12 +29,12 @@ describe("Room Booking extend  ", () => {
         cy.get('body').click();
         createBooking.getClickOnBookNowBtnForRooms();
         createBooking.getClickOnConfirmBookingBtnOfRooms();
-        cy.contains('Booking created successfully',{timeout: 10000}).should('be.visible')
+        cy.contains('Booking created successfully').should('be.visible')
         createBooking.getClickOnCheckInBtn();
-        cy.contains('Room Check in done successfully',{timeout:7000}).should('be.visible')
+        cy.contains('Room Check in done successfully').should('be.visible')
         createBooking.getClickOnExtendBtn();
         createBooking.getClickOnMinuteOptions();
-        cy.contains('Booking extended succesfully',{timeout:7000}).should('be.visible');
+        cy.contains('Booking extended succesfully').should('be.visible');
         cy.contains('In Use, Booking Extended').should('be.visible')
     })
 })
