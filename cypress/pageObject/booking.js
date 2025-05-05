@@ -32,7 +32,7 @@ class Booking{
     guestEmail="body > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(3) > div:nth-child(1)";
     bookNowBtnForInviteUser='[data-row-key="7820"] > .ant-table-cell-fix-right > .ant-btn > span';
     automationTowerVms="#0-floor > .ant-col-24 > .ant-row-space-between";
-    recurringAutomationTower=':nth-child(8) > .ant-flex > .sc-ghWlax';
+    recurringAutomationTower=':nth-child(8)>.ant-flex>.sc-gDpztx';
     defaultStarIcon=' div.ant-col.ant-col-1.css-augzy' ;
     repeatInputField='.ant-col > .sc-jtQUzJ > .sc-cEzcPc > .ant-select > .ant-select-selector > .ant-select-selection-item';
     repeatDropDownDaily="div[title='Daily']>div[class='ant-select-item-option-content']";
@@ -55,9 +55,10 @@ class Booking{
     singleDayDateInput="input[placeholder='Select date']";
     singleDayStartTime=':nth-child(1) > .sc-kEfuZE';
     singleDayEndTime=':nth-child(2) > .ant-row > :nth-child(2)';
-    resourceInput='.category_filter > [style="width: 100%; display: flex; flex-direction: column; justify-content: flex-end;"] > .sc-gQaihK > .sc-iuUfFv > .ant-select > .ant-select-selector';
+    resourceInput="div[name='resourceType'] div[class='ant-select-selector']";
     resourceRooms="span[title='Rooms'] >span[class='ant-select-tree-title']";
     resourceDesks='.ant-select-tree-treenode-switcher-close>[title="Desks"]';
+    recurringAutomationFloor=".expandable-sidebar-data>.ant-col-24";
 
 
 
@@ -140,6 +141,11 @@ class Booking{
     {
         return cy.get(this.recurringAutomationTower).click()
     }
+    getClickOnRecurringAutomationFloor()
+    {
+        return cy.get(this.recurringAutomationFloor).click()
+    }
+
     getDefaultListView()
     {
         return cy.get(this.defaultListView)
@@ -169,7 +175,7 @@ class Booking{
 
   getClickOnStatusDropDown()
   {
-    return cy.get(this.statusDropDown,).click();
+    return cy.get(this.statusDropDown).click();
   }
 
   selectStatus()
