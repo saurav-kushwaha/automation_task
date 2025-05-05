@@ -16,10 +16,10 @@ class QuickReport {
     }
     
     getClickOnDownloadCenter() {
-        return cy.get(this.downloadCenter,{timeout:10000}).click();
+        return cy.get(this.downloadCenter).click();
     }
     getClickOnAllVisitorBtn() {
-       return cy.get(this.downloadOptionsButtonAllvisitors,{timeout:10000}).click();
+       return cy.get(this.downloadOptionsButtonAllvisitors).click();
     }
     
     getClickOnQuickReport() {
@@ -61,7 +61,7 @@ class QuickReport {
     }
     
     verifySuccessMessage(){
-        return cy.contains('Requested Report should be available shortly in the download center',{timeout:14000}).should('be.visible');
+        return cy.contains('Requested Report should be available shortly in the download center').should('be.visible');
     }
     
 }
