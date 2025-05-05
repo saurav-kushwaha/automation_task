@@ -4,7 +4,7 @@ class QuickReport {
         this.quickReport = ':nth-child(1) > .sc-kOHUsU';
         this.allEmployeesBtnOfEmployeeAccessList = "button[id='download-report-All Employees']";
         this.allKiosksBtn = "button[id='download-report-All Kiosks']";
-        this.downloadCenter =".download-center"
+        this.downloadCenter ="header:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)"
         this.titleText ="table>tbody>tr.ant-table-row-level-0>td:nth-child(1)>span>div";
         this.datePicker='table> tbody> tr> td:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1)';
         this.selectThisWeek= "div[class='ant-picker-presets'] li:nth-child(2)";
