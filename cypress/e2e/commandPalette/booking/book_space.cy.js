@@ -1,5 +1,5 @@
-import LoginPage from "../../../pageObject/login.js";
-import CommandPalette from "../../../pageObject/commandPalette.js";
+import LoginPage from "../../pageObject/login.js";
+import CommandPalette from "../../pageObject/commandPalette.js";
 const loginPage = new LoginPage();
 const commandPalette = new CommandPalette();
 

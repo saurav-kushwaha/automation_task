@@ -1,5 +1,5 @@
-import Booking from "../../../pageObject/booking.js";
-import LoginPage from "../../../pageObject/login.js";
+import Booking from "../../pageObject/booking.js";
+import LoginPage from "../../pageObject/login.js";
 const loginPage = new LoginPage();
 const createBooking = new Booking();
 
