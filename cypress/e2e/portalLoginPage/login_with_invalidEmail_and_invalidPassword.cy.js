@@ -1,6 +1,6 @@
 
-import LoginPage from "../../pageObject/login.js";
-const loginPage = new LoginPage()
+import LoginPage from "../pageObject/login.js";
+const loginPage = new LoginPage();
 describe('Login functionality', () => {
 
     it('verify  error messsage by entering incorrect email_id and incorrect password',()=>{

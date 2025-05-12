@@ -1,4 +1,4 @@
-import LoginPage from "../../pageObject/login.js";
+import LoginPage from "../pageObject/login.js";
 const loginPage = new LoginPage();
 describe('Login functionality', () => {
 
