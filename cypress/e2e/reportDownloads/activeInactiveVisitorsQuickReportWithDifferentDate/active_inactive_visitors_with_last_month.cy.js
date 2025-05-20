@@ -1,7 +1,7 @@
-import LoginPage from "../../../pageObject/login.js";
-import QuickReport from "../../../pageObject/quick_report.js";
+import LoginPage from "../../pageObject/login.js";
+import QuickReport from "../../pageObject/quick_report.js";
 const quickReport = new QuickReport();
-const loginPage = new LoginPage()
+const loginPage = new LoginPage();
 
 describe('Portal Downloads : quick reports  ', () => {
     before( () =>{ 
